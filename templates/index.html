@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL tracker</title>
+</head>
+<body>
+    <form action="{{ url_for('traitement')}}" method="POST">
+        <h1>TRACK YOUR URL</h1>
+        <input type="url" name="url" required>
+        <input type="submit">
+        {% if short_url %}
+            <h2>Voici l'url</h2>
+            <p>{{short_url}}</p>
+        {% endif %}
+    </form>
+    
+</body>
+</html>
